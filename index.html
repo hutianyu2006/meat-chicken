@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+var i = window.prompt("请输入目标URL")
+var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
+
+httpRequest.open('GET', i, true);
+httpRequest.send();
+httpRequest.onreadystatechange = function () {
+if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+var json = httpRequest.responseText;
+console.log(json);
+}
+};
+</script>
+</body>
+</html>
