@@ -5,12 +5,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <script type="text/javascript">
 var i = prompt("Please enter the domain")
-var icon = 'http://'+i+'/favicon.ico'
+var icon = 'http://'+i+'/index.html'
 function b(){
-var d1=document.getElementById("d1");
-var img=document.createElement("img");
-img.src= icon ;
-d1.appendChild(img);
+var img = document.createElement('img');
+      img.src =icon;
+      document.body.appendChild(img);
 }
 b();
 
