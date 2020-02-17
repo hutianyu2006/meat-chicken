@@ -2,16 +2,10 @@
 <head>
 </head>
 <body>
-<script type="text/javascript">
+<script src="http://files.cnblogs.com/sohighthesky/jquery-1.4.min.js"></script>
+  <script type="text/javascript">
 var i = prompt("请输入目标URL")
-var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
-
-httpRequest.open('GET', i, true);
-httpRequest.send();
-httpRequest.onreadystatechange = function () {
-if (httpRequest.readyState == 4 && httpRequest.status == 200) {
-var json = httpRequest.responseText;
-console.log(json);
+$.get(i)
 }
 };
 </script>
